@@ -4,6 +4,6 @@ mle.py contains two functions to determine:
 
 Both functions rely on historical weather data from NOAA.
 
-To run either function:
-1. Function, days_of_precip, takes a city name (string) as an argument, either 'mia', 'bos', or 'jun' (for Miami, Boston, and Juneau, respectively).
-2. Function, chance_of_precip, takes a city name (same three choices), a month (int), and a day (int) in that order as argument.
+Run either function from the commmand line:
+- days_of_precip: takes a city name (string) as an argument, either 'mia', 'bos', or 'jun' (for Miami, Boston, and Juneau, respectively).
+- chance_of_precip: takes a city name (same three choices), a month (int), and a day (int) in that order as argument.
