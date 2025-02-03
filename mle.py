@@ -48,6 +48,11 @@ def chance_of_precip(city, month, day):
     """
     Estimate the probability of precipitation for a given city and date.
 
+    Logic:
+    Simple framing as the likelihood of precip given past observations of precip on a given day.
+    I used only the presence or absense of precip (discrete) to define the likelihood function, 
+    but in reality, a joint distribution of continuous precip and temp values may provide better results.
+
     Parameters:
     city (str): City name (e.g., 'bos', 'jnu', 'mia')
     month (int): Month of the year (1-12)
@@ -66,6 +71,8 @@ def chance_of_precip(city, month, day):
         return np.nan
     
     n_rain_obs = df_a_day['PRCP_TF'].sum()
+    
+    # Binominal coefficient is because order (Rain, Dry, Dry) doesn't matter for the likelihood func.
     binomial_coeff = math.factorial(n_obs) / (math.factorial(n_rain_obs) * math.factorial(n_obs-n_rain_obs))
 
     p_vec = np.linspace(0.01, 1, 100)
