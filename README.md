@@ -1,6 +1,6 @@
-The mle.py contains two functions to determine:
-1. The average number of days in a year that a given city had non-zero precipitation
-2. The likelihood of precipitaiton on a given day of the year in a given city
+mle.py contains two functions to determine:
+1. The average number of days in a year that a given city had non-zero precipitation.
+2. The likelihood of precipitaiton on a given day of the year in a given city.
 
 Both functions rely on historical weather data from NOAA.
 
